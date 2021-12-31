@@ -1,0 +1,34 @@
+# Creating a virtual Environment
+python -m venv nn_env
+
+# Activating the virtual environment
+source nn_env/Scripts/activate
+
+# To deactivate 
+deactivate
+
+# Installing Django
+pip install django
+
+# Creating a Project in Django
+django-admin startproject name_name .
+
+# Creating the Database
+python manage.py migrate
+
+# Viewing the project
+python manage.py runserver 8000
+
+# creating an app(activate the virtual environment first)
+python manage.py startapp name_names .
+
+
+# After modifying models.py Modify the databasee to store information relatied to model Topic
+python manage.py makemigrations learning_logs
+
+# Apply modification to have Django modify the database for us
+python manage.py migrate
+
+# Create a superuser
+python manage.py createsuperuser
+
